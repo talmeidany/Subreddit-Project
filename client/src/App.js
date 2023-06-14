@@ -8,7 +8,8 @@ function App() {
   const [posts, setPosts] = useState([]);
   const [userText, setUserText] = useState('Enter Subreddit!');
 
-  const serverUrl = "http://localhost:3005/";
+  const serverUrl = process.env.REACT_APP_API_URL;
+  console.log(serverUrl);
 
   const text = "\n Please enter another subreddit.";
   const e404Message = "The information for the chosen subreddit cannot be found." + text;
