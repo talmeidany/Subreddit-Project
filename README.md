@@ -17,8 +17,11 @@ This application displays the top posts of a given subreddit. Each post includes
 1. Clone the repository to your local machine.
 2. Open a terminal and navigate to the project directory.
 3. Run the command `npm install` to install the necessary dependencies.
-4. Run the command `npm start` to start the application.
-5. Open a web browser and visit `http://localhost:3000` to access the application.
+4. Open a terminal and navigate to reddit-backend.
+5. Run the command `node index.js`.
+6. Open a terminal and navigate to reddit-app.
+7. Run the command `npm star`.
+8. Open a web browser and visit `http://localhost:3000` to access the application.
 
 ## Application Functionality
 The purpose of this application is to display the top posts of a chosen subreddit. Each post is shown with its title, score, and two buttons for marking the post as read or unread.
