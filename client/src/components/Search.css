@@ -1,0 +1,52 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #127f66;
+  padding: 10px;
+}
+
+.subreddit_input {
+  display: inline-block;
+  color: #F3F3F3;
+  font-size: 40px;
+  font-weight: 600;
+  font-style: italic;
+  text-transform: uppercase;
+  background: none;
+  border: none;
+  outline: none;
+  appearance: none;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.userText {
+  font-size: 15px;
+  width: 200px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  margin: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #a1e8f6;
+  color: #263030;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.button:hover {
+  background-color: #f7d76c;
+}
