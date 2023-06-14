@@ -1,6 +1,6 @@
 # My Application
 
-Link: https://main.d2scrynfczmflh.amplifyapp.com/
+Link: https://subreddit.onrender.com/
 ## Overview
 This application displays the top posts of a given subreddit. Each post includes a title, a score, and two buttons for marking the post as read or unread.
 
