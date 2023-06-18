@@ -10,7 +10,6 @@ const corsOptions = {
   credentials: true,
 };
 
-// app.use(express.static(buildPath))
 app.use(cors(corsOptions));
 
 app.get("/", (req, res) => {
@@ -51,9 +50,7 @@ app.get("/", (req, res) => {
     });
 });
 
-// if (process.env.NODE_ENV === 'production') {
-//   app.use(express.static('reddit-app/build'));
-// }
+
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
   app.get("*", (req, res) => {
