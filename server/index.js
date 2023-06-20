@@ -41,25 +41,12 @@ app.get("/", (req, res) => {
    
     .catch((error) => {
   // Handle different error cases and send appropriate error responses
-  /*if (error.code === 'ECONNABORTED') {
-    return res.status(500).json({ error: "Server timeout. Please try again later." }).end();
-  } else*/ if (error.response && error.response.status === 404) {
+   if (error.response && error.response.status === 404) {
     return res.status(404).json({ error: "Subreddit not found." }).end();
   } else  {
     return res.status(403).json({ error: "Forbidden Subreddit." }).end();
   }
 });
-
-    /*.catch((error) => {
-      // Handle different error cases and send appropriate error responses
-      if (error.posts.status === 404) {
-        return res.status(404).json({ error: "Subreddit not found." }).end;
-      } else if (error.posts.status === 403) {
-        return res.status(403).json({ error: "Forbidden Subreddit." }).end;
-      } else {
-        return res.status(500).json({ error: "Internal server error." }).end;
-      }
-    });*/
 });
 
 
