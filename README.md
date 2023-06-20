@@ -1,6 +1,6 @@
 # My Application
 
-Link: https://subreddit.onrender.com/
+Link: https://subbredit-posts.onrender.com/
 ## Overview
 This application displays the top posts of a given subreddit. Each post includes a title, a score, and two buttons for marking the post as read or unread.
 
