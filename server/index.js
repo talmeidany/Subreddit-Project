@@ -41,9 +41,9 @@ app.get("/", (req, res) => {
    
     .catch((error) => {
   // Handle different error cases and send appropriate error responses
-  if (error.code === 'ECONNABORTED') {
+  /*if (error.code === 'ECONNABORTED') {
     return res.status(500).json({ error: "Server timeout. Please try again later." }).end();
-  } else if (error.response && error.response.status === 404) {
+  } else*/ if (error.response && error.response.status === 404) {
     return res.status(404).json({ error: "Subreddit not found." }).end();
   } else  {
     return res.status(403).json({ error: "Forbidden Subreddit." }).end();
