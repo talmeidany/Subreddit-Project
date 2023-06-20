@@ -23,7 +23,7 @@ app.get("/", (req, res) => {
   res.setHeader("Access-Control-Allow-Origin", process.env.ORIGIN);
   // Make a GET request to the Reddit API to fetch top posts for the specified subreddit
   axios
-    .get("http://www.reddit.com/r/" + subreddit + "/top.json")
+    .get("http://www.reddit.com/r/" + subreddit + "/top.json", { timeout: 5000 })
     .then((posts) => {
       // Extract relevant data from the response and create a new array of formatted posts
       let result = [];
@@ -38,7 +38,19 @@ app.get("/", (req, res) => {
       });
       res.send(result).end();
     })
+   
     .catch((error) => {
+  // Handle different error cases and send appropriate error responses
+  if (error.code === 'ECONNABORTED') {
+    return res.status(500).json({ error: "Server timeout. Please try again later." }).end();
+  } else if (error.response && error.response.status === 404) {
+    return res.status(404).json({ error: "Subreddit not found." }).end();
+  } else  {
+    return res.status(403).json({ error: "Forbidden Subreddit." }).end();
+  }
+});
+
+    /*.catch((error) => {
       // Handle different error cases and send appropriate error responses
       if (error.posts.status === 404) {
         return res.status(404).json({ error: "Subreddit not found." }).end;
@@ -47,7 +59,7 @@ app.get("/", (req, res) => {
       } else {
         return res.status(500).json({ error: "Internal server error." }).end;
       }
-    });
+    });*/
 });
 
 
