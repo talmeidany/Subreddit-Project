@@ -17,6 +17,7 @@ header {
   border: none;
   outline: none;
   appearance: none;
+  width: 800px; 
 }
 
 .search-container {
