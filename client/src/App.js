@@ -22,10 +22,9 @@ function App() {
     // Make a GET request to the server to fetch top posts for the specified subreddit
     axios.get(serverUrl, { params: { subreddit: subreddit }, withCredentials: true, })
       .then(topPosts => {
-alert (topPosts.status)
         //  If the response data is valid but empty
         if (topPosts.data.length === 0) {
-          alert(text)
+          alert(e404Message)
           setUserText('Enter Subreddit!')
         }
         // Update the user text and set the posts array with the response data
@@ -36,7 +35,6 @@ alert (topPosts.status)
       })
       // Handle errors and display appropriate alerts
       .catch((err) => {
-        alert(err.response.status)
         setUserText('Enter Subreddit!')
         if (err.response && err.response.status === 400) {
           alert(e400Message);
