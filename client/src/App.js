@@ -24,7 +24,7 @@ function App() {
       .then(topPosts => {
 
         //  If the response data is valid but empty
-        if (topPosts.data.length === 0) {
+        if (topPosts.data.length === 0 || topPosts===null ) {
           alert(text)
           setUserText('Enter Subreddit!')
         }
