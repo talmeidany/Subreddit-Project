@@ -27,11 +27,12 @@ header {
   justify-content: flex-end;
 }
 
-.userText {
+.text {
   font-size: 15px;
   width: 200px;
   height: 30px;
   border-radius: 5px;
+  margin: 0.3rem;
 }
 
 .button {
