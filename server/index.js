@@ -13,7 +13,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 app.get("/", (req, res) => {
-  const { subreddit } = req.query;
+   const { subreddit, filterWord } = req.query;
 
   if (!subreddit) {
     res.status(400).json({ message: "Bad request" });
@@ -26,8 +26,10 @@ app.get("/", (req, res) => {
     .get("http://www.reddit.com/r/" + subreddit + "/top.json", { timeout: 5000 })
     .then((posts) => {
       // Extract relevant data from the response and create a new array of formatted posts
-      let result = [];
-      result = posts.data.data.children.map((child) => {
+     let filterRes = [];
+      filterRes = filterWord===undefined ?  posts.data.data.children : posts.data.data.children.filter((child) => child.data.title.includes(filterWord));
+      let result=[];
+      result = filterRes.map((child) => {
         return {
           id: child.data.id,
           title: child.data.title,
