@@ -17,10 +17,10 @@ function App() {
   const e403Message = " Forbidden Subreddit" + text;
   const e500Message = " Internal Error " + text;
 
-  const findSubreddit = (subreddit) => {
+  const findSubreddit = (subreddit, filterWord) => {
     setPosts([]);
     // Make a GET request to the server to fetch top posts for the specified subreddit
-    axios.get(serverUrl, { params: { subreddit: subreddit, filterWord: filterWord }, withCredentials: true, })
+    axios.get(serverUrl, { params: { subreddit: subreddit, filterWord: filterWord }, withCredentials: true})
       .then(topPosts => {
         //  If the response data is valid but empty
         if (topPosts.data.length === 0) {
