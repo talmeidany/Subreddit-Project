@@ -7,6 +7,7 @@ function Search(props) {
 
   const handleSearch = () => {
     props.findSubreddit(subreddit, filterWord);
+    setFilterWord('');
     setSubreddit('');
   };
 
