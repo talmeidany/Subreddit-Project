@@ -20,7 +20,7 @@ function App() {
   const findSubreddit = (subreddit) => {
     setPosts([]);
     // Make a GET request to the server to fetch top posts for the specified subreddit
-    axios.get(serverUrl, { params: { subreddit: subreddit }, withCredentials: true, })
+    axios.get(serverUrl, { params: { subreddit: subreddit, filterWord: undefined }, withCredentials: true, })
       .then(topPosts => {
         //  If the response data is valid but empty
         if (topPosts.data.length === 0) {
