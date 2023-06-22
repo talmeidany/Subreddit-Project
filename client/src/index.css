@@ -45,15 +45,16 @@
 }*/
 
 .card__title {
-  padding: 1rem;
+  padding: 0.5rem;
   font-style: italic;
   font-family: Tahoma;
   font-weight: bold;
   font-size: 20px;
+  margin: 0rem;
 }
 
 .card__score {
-  padding: 0 1rem;
+  padding: 0.5rem;
   font-family: Tahoma;
   font-size: 15px;
 }
@@ -78,22 +79,46 @@
   border-radius: 15px;
   text-decoration: none;
   text-align: center;
-  width: 350px;
+  width: 500px;
 }
 
-.btn2 {
-  padding: 0.5rem;
+.like_btn {
+  padding: 0.9rem;
   font-family: Tahoma;
   font-weight: bold;
-  font-size: 1rem;
-  margin: 0.5rem;
+  font-size: 0.8rem;
+  margin: 0.7rem;
   border: 2px solid #263030;
-  background: #abe6e1;
+  background: #ebbde4;
   color: #263030;
-  border-radius: 15px;
+  border-radius: 40px;
   text-decoration: none;
   text-align: center;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 4.2rem;
 }
+
+.like_btn_clicked {
+  padding: 0.9rem;
+  font-family: Tahoma;
+  font-weight: bold;
+  font-size: 0.8rem;
+  margin: 0.5rem;
+  border: 2px solid #263030;
+  background: #e64eac;
+  color: #263030;
+  border-radius: 40px;
+  text-decoration: none;
+  text-align: center;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  margin-left: 4.2rem;
+}
+
 
 .card:hover {
   transform: scale(1.02);
@@ -106,7 +131,12 @@
   color: #F3F3F3;
 }
 
-.btn2:hover {
-  background-color: #127f66;
+.like_btn:hover {
+  background-color: #e64eac;
+  color: #F3F3F3;
+}
+
+.like_btn_clicked:hover {
+  background-color: #ebbde4;
   color: #F3F3F3;
 }
