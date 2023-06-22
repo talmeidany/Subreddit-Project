@@ -29,7 +29,7 @@ function Post({ post }) {
       <div className='buttons_container'>
           <a className="card__btn" href={baseURL + updatePost.url}
           target='_blank' onClick={(e) => handleClick(true)} >Read</a>
-          <button className="btn2" onClick={(e) => handleClick(false)} >UnRead</button>
+          <button className="card_btn" onClick={(e) => handleClick(false)} >UnRead</button>
       </div>
     </div>
   )
