@@ -36,6 +36,7 @@ app.get("/", (req, res) => {
           url: child.data.permalink,
           clicked: child.data.clicked,
           score: child.data.score,
+          like: false
         };
       });
       res.send(result).end();
