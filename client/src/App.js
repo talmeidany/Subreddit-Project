@@ -11,7 +11,7 @@ function App() {
   const serverUrl = process.env.REACT_APP_API_URL;
   console.log(serverUrl);
 
-  const text = "\n Please enter another subreddit.";
+  const text = "\n Please enter another input.";
   const e404Message = "The information for the chosen subreddit cannot be found." + text;
   const e400Message = " Empty Subreddit." + text;
   const e403Message = " Forbidden Subreddit" + text;
