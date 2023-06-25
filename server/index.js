@@ -27,7 +27,8 @@ app.get("/", (req, res) => {
     .then((posts) => {
       // Extract relevant data from the response and create a new array of formatted posts
      let filterRes = [];
-      filterRes = filterWord==='' ?  posts.data.data.children : posts.data.data.children.filter((child) => child.data.title.includes(filterWord));
+     filterRes = filterWord === '' ? posts.data.data.children : posts.data.data.children.filter((child) => child.data.title.toLowerCase().includes(filterWord.toLowerCase()));
+      //filterRes = filterWord==='' ?  posts.data.data.children : posts.data.data.children.filter((child) => child.data.title.includes(filterWord));
       let result=[];
       result = filterRes.map((child) => {
         return {
